@@ -1,38 +1,212 @@
-.App {
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Orange: hsl(25, 97%, 53%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Light Grey: hsl(217, 12%, 63%)
+- Medium Grey: hsl(216, 12%, 54%)
+- Dark Blue: hsl(213, 19%, 18%)
+- Very Dark Blue: hsl(216, 12%, 8%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 15px
+
+### Font
+
+- Family: [Overpass](https://fonts.google.com/specimen/Overpass)
+- Weights: 400, 700 */
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+
+  /* primary color*/
+  --orange: hsl(25, 97%, 53%);
+
+  /* Neutral colors */
+
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --lighter-dark-blue: hsl(213, 19%, 25%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+
+
+
+  /* borders */
+  --red-border: 1px solid red;
+  --green-border: 1px solid green;
+  --blue-border: 1px solid blue;
+
+  /* circle size */
+  --circle-size: 40px;
+
+ 
+}
+
+body{
+  color: var(--white);
+  background-color: var(--very-dark-blue);
+  font-family: 'Overpass', sans-serif;
+}
+
+/* font size for paragraphs */
+p{
+  font-size: 15px;
+}
+
+.App{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+}
+
+.container{
+  background-color: var(--dark-blue);
+  /* border: var(--red-border); */
+  width: 350px;
+  height: 350px;
+  border-radius: 20px;
+}
+
+.content{
+  margin: 25px;
+  /* border: var(--red-border); */
+}
+
+.star-icon{
+  width: var(--circle-size);
+  height: var(--circle-size);
+  background-color: var(--lighter-dark-blue);
+  /* border: var(--blue-border); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+starIcon{
+  /* border: var(--green-border); */
+  display: block;
+}
+
+h3{
+  margin: 20px 0;
+}
+
+p{
+  color: var(--light-grey);
+}
+
+.ratings-container{
+  /* border: var(--blue-border); */
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.rating{
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  color: var(--light-grey);
+  width: var(--circle-size);
+  height: var(--circle-size);
+  background-color: var(--lighter-dark-blue);
+  /* border: var(--green-border); */
+  border-radius: 50%;
+  border: none;
+}
+
+
+
+.rating:hover{
+  background-color: var(--medium-grey);
+  color: var(--white);
+}
+
+.active{
+  background-color: var(--orange);
+  color: var(--white)
+}
+
+
+.btn{
+  /* border: var(--red-border); */
+  color: var(--white);
+  width: 100%;
+  border: none;
+  background-color: var(--orange);
+  height: var(--circle-size);
   text-align: center;
+  margin-top: 20px;
+  border-radius: 20px/20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn:active{
+  background-color: var(--white);
+  color: var(--orange);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* thank you component */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.thanks-container{
+  /* border: var(--green-border); */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.chosen{
+  display: block;
+  background-color: var(--lighter-dark-blue);
+  width: 180px;
+  /* border: var(--green-border); */
+  margin-top: 20px;
+  padding: 8px 0px;
+  border-radius: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.chosen > p{
+  /* border: var(--red-border); */
+  color: var(--orange);
+  background-color: inherit;
+  width: 160px;
+  margin: 0px auto;
+}
+
+.thanks-container p:last-child{
+  /* border: var(--green-border); */
+  text-align: center;
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center;
+ }
+
+.attribution a { 
+      color: hsl(228, 45%, 44%); 
 }
